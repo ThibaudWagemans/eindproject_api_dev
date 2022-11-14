@@ -1,6 +1,6 @@
 version: "3.10"
 services:
  basisproject-service:
-  image: thibaudw/api-dev-python-api-test
+  image: thibaudw/basisproject_api
   ports:
     - "8000:8000"
