@@ -3,26 +3,77 @@ from random import randint
 
 app = FastAPI()
 
-@app.get("/percentage")
-async def get_random_percentage():
-    return {'percentage': randint(0, 100)}
+#list of graphic cards
+GPUs = []
 
-@app.get("/percentage/{lower_limit}/{upper_limit}")
-async def get_random_percentage1(lower_limit: int, upper_limit: int):
-    if(lower_limit >= upper_limit):
-        return {'error': 'The upper limit must be greater than the lower limit!', 'lower limit': lower_limit, 'upper limit': upper_limit}
-    return {'percentage': randint(lower_limit, upper_limit)}
+#class for graphic cards
+class GraphicCard (BaseModel) :
+    def __init__(self, name, price, memory, power):
+        name    = str
+        price   = int
+        memory  = int
+        power   = int
 
-@app.get("/percentage/{lower_limit}/{upper_limit}/{amount}")
-async def get_random_percentage2(lower_limit: int, upper_limit: int, amount: int):
-    if(lower_limit >= upper_limit):
-        return {'error': 'The upper limit must be greater than the lower limit!', 'lower limit': lower_limit, 'upper limit': upper_limit}
+#make database graphic cards
+@app.on_event("startup")
+def startup_event():
+    GPUs.append(GraphicCard(name="RTX 3080", price=700, memory=10, power=350))
+    GPUs.append(GraphicCard(name="RTX 3090", price=1500, memory=24, power=350))
+    GPUs.append(GraphicCard(name="RTX 3070", price=500, memory=8, power=220))
+    GPUs.append(GraphicCard(name="RTX 3060", price=300, memory=6, power=170))
+    GPUs.append(GraphicCard(name="RTX 3050", price=200, memory=4, power=120))
 
-    if (amount <= 0):
-        return {'error': 'The amount must be greater than 0!', 'amount': amount}
+#return all graphic cards
+@app.get("/GPUs")
+def get_GPUs():
+    return GPUs
 
-    random_numbers = []
-    for counter in range(amount):
-        random_numbers.append(randint(lower_limit, upper_limit))
+#return a random graphic card
+@app.get("/GPUs/random")
+def get_random_GPU():
+    return GPUs[randint(0, len(GPUs)-1)]
 
-    return {'percentages': random_numbers}
+#return a graphic card by name
+@app.get("/GPUs/{name}")
+def get_GPU_by_name(name: str):
+    for GPU in GPUs:
+        if GPU.name == name:
+            return GPU
+    return {"error": "GPU not found"}
+
+#return a graphic card by price
+@app.get("/GPUs/price/{price}")
+def get_GPU_by_price(price: int):
+    for GPU in GPUs:
+        if GPU.price == price:
+            return GPU
+    return {"error": "GPU not found"}
+
+#return a graphic card by memory
+@app.get("/GPUs/memory/{memory}")
+def get_GPU_by_memory(memory: int):
+    for GPU in GPUs:
+        if GPU.memory == memory:
+            return GPU
+    return {"error": "GPU not found"}
+
+#return a graphic card by power
+@app.get("/GPUs/power/{power}")
+def get_GPU_by_power(power: int):
+    for GPU in GPUs:
+        if GPU.power == power:
+            return GPU
+    return {"error": "GPU not found"}
+
+#get list graphic cards
+@app.get("/GPUs")
+def get_GPUs():
+    return GPUs
+
+
+#function to add a graphic card
+@app.post("/add")
+def add (name: str, price: int, memory: int, power: int):
+    newGPU = GraphicCard(name, price, memory, power)
+    GPUs.append(newGPU)
+    return GPUs
