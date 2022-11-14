@@ -8,10 +8,10 @@ app = FastAPI()
 
 #class for graphic cards
 class GraphicCard (BaseModel) :
-    name    = str
-    price   = int
-    memory  = int
-    power   = int
+    name    : str
+    price   : int
+    memory  : int
+    power   : int
 
 #list of graphic cards
 GPUs = []
