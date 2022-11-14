@@ -17,8 +17,6 @@ class GraphicCard (BaseModel) :
 GPUs = []
 
 #make database graphic cards
-#@app.on_event("startup")
-#async def startup_event():
 GPUs.append(GraphicCard(name="RTX 3080", price=700, memory=10, power=350))
 GPUs.append(GraphicCard(name="RTX 3090", price=1500, memory=24, power=350))
 GPUs.append(GraphicCard(name="RTX 3070", price=500, memory=8, power=220))
@@ -29,12 +27,11 @@ GPUs.append(GraphicCard(name="RTX 3050", price=200, memory=4, power=120))
 @app.get("/")
 async def root():
     return {"message": "Hello World"}
-    print (GPUs)
 
 #return all graphic cards
 @app.get("/GPUs")
 async def get_GPUs():
-    return GPUs
+    return {"GPUs": GPUs}
 
 #return a random graphic card
 @app.get("/GPUs/random")
