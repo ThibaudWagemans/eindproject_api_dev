@@ -15,11 +15,6 @@ class GraphicCard (BaseModel) :
 #list of graphic cards
 GPUs = []
 
-#filling the list with graphic cards
-for i in range(10) :
-    GPUs.append(GraphicCard(name = "GPU" + str(i), price = randint(100, 1000), memory = randint(1, 16), power = randint(100, 500)))
-
-
 #make database graphic cards
 #@app.on_event("startup")
 #async def startup_event():
@@ -33,6 +28,7 @@ GPUs.append(GraphicCard(name="RTX 3050", price=200, memory=4, power=120))
 @app.get("/")
 async def root():
     return {"message": "Hello World"}
+    print (GPUs)
 
 #return all graphic cards
 @app.get("/GPUs")
