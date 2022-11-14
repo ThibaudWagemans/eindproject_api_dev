@@ -4,8 +4,6 @@ from pydantic import BaseModel
 
 app = FastAPI()
 
-#list of graphic cards
-GPUs = []
 
 #class for graphic cards
 class GraphicCard (BaseModel) :
@@ -15,9 +13,12 @@ class GraphicCard (BaseModel) :
         memory  = int
         power   = int
 
+#list of graphic cards
+GPUs = []
+
 #make database graphic cards
 @app.on_event("startup")
-def startup_event():
+async def startup_event():
     GPUs.append(GraphicCard(name="RTX 3080", price=700, memory=10, power=350))
     GPUs.append(GraphicCard(name="RTX 3090", price=1500, memory=24, power=350))
     GPUs.append(GraphicCard(name="RTX 3070", price=500, memory=8, power=220))
@@ -26,17 +27,17 @@ def startup_event():
 
 #return all graphic cards
 @app.get("/GPUs")
-def get_GPUs():
+async def get_GPUs():
     return GPUs
 
 #return a random graphic card
 @app.get("/GPUs/random")
-def get_random_GPU():
+async def get_random_GPU():
     return GPUs[randint(0, len(GPUs)-1)]
 
 #return a graphic card by name
 @app.get("/GPUs/{name}")
-def get_GPU_by_name(name: str):
+async def get_GPU_by_name(name: str):
     for GPU in GPUs:
         if GPU.name == name:
             return GPU
@@ -44,7 +45,7 @@ def get_GPU_by_name(name: str):
 
 #return a graphic card by price
 @app.get("/GPUs/price/{price}")
-def get_GPU_by_price(price: int):
+async def get_GPU_by_price(price: int):
     for GPU in GPUs:
         if GPU.price == price:
             return GPU
@@ -52,7 +53,7 @@ def get_GPU_by_price(price: int):
 
 #return a graphic card by memory
 @app.get("/GPUs/memory/{memory}")
-def get_GPU_by_memory(memory: int):
+async def get_GPU_by_memory(memory: int):
     for GPU in GPUs:
         if GPU.memory == memory:
             return GPU
@@ -60,7 +61,7 @@ def get_GPU_by_memory(memory: int):
 
 #return a graphic card by power
 @app.get("/GPUs/power/{power}")
-def get_GPU_by_power(power: int):
+async def get_GPU_by_power(power: int):
     for GPU in GPUs:
         if GPU.power == power:
             return GPU
@@ -68,13 +69,13 @@ def get_GPU_by_power(power: int):
 
 #get list graphic cards
 @app.get("/GPUs")
-def get_GPUs():
+async def get_GPUs():
     return GPUs
 
 
 #function to add a graphic card
 @app.post("/add")
-def add (name: str, price: int, memory: int, power: int):
+async def add (name: str, price: int, memory: int, power: int):
     newGPU = GraphicCard(name, price, memory, power)
     GPUs.append(newGPU)
     return GPUs
