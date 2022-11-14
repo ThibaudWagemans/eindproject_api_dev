@@ -73,11 +73,6 @@ async def get_GPU_by_power(power: int):
             return GPU
     return {"error": "GPU not found"}
 
-#get list graphic cards
-@app.get("/GPUs")
-async def get_GPUs():
-    return GPUs
-
 
 #function to add a graphic card
 @app.post("/add")
