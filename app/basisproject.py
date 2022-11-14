@@ -24,6 +24,11 @@ async def startup_event():
     GPUs.append(GraphicCard(name="RTX 3060", price=300, memory=6, power=170))
     GPUs.append(GraphicCard(name="RTX 3050", price=200, memory=4, power=120))
 
+#test get hello world
+@app.get("/")
+async def root():
+    return {"message": "Hello World"}
+
 #return all graphic cards
 @app.get("/GPUs")
 async def get_GPUs():
