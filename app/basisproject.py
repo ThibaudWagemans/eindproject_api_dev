@@ -72,7 +72,7 @@ async def get_GPU_by_power(power: int):
 
 
 #function to add a graphic card
-@app.post("/add/{name},{price},{memory},{power}")
+@app.post("/add/{name}/{price}/{memory}/{power}")
 async def add (name: str, price: int, memory: int, power: int):
     newGPU = GraphicCard(name, price, memory, power)
     GPUs.append(newGPU)
