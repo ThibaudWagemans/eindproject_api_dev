@@ -77,3 +77,12 @@ async def add (name: str, price: int, memory: int, power: int):
     newGPU = GraphicCard(name, price, memory, power)
     GPUs.append(newGPU)
     return GPUs
+
+#function to delete a graphic card
+@app.delete("/delete/{name}")
+async def delete (name: str):
+    for GPU in GPUs:
+        if GPU.name == name:
+            GPUs.remove(GPU)
+            return GPUs
+    return {"error": "GPU not found"}
