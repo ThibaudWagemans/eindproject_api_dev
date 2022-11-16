@@ -54,6 +54,15 @@ async def get_GPU_by_price(price: int):
             return GPU
     return {"error": "GPU not found"}
 
+#return a graphic card by closest price
+@app.get("/GPUs/price/closest/{price}")
+async def get_GPU_by_closest_price(price: int):
+    closest = GPUs[0]
+    for GPU in GPUs:
+        if abs(GPU.price - price) < abs(closest.price - price):
+            closest = GPU
+    return closest
+
 #return a graphic card by memory
 @app.get("/GPUs/memory/{memory}")
 async def get_GPU_by_memory(memory: int):
