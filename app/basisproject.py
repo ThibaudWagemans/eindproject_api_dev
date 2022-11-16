@@ -74,9 +74,13 @@ async def get_GPU_by_power(power: int):
 #function to add a graphic card
 @app.post("/add/{name}/{price}/{memory}/{power}")
 async def add (name: str, price: int, memory: int, power: int):
-    newGPU = GraphicCard(name, price, memory, power)
+    #check if the graphic card already exists
+    for GPU in GPUs:
+        if GPU.name == name:
+            return {"error": "GPU already exists"}
+    newGPU = GraphicCard(name = name, price = price, memory = memory, power = power)
     GPUs.append(newGPU)
-    return GPUs
+    return {"message": "GPU added", "GPU": newGPU}
 
 #function to delete a graphic card
 @app.delete("/delete/{name}")
@@ -84,5 +88,16 @@ async def delete (name: str):
     for GPU in GPUs:
         if GPU.name == name:
             GPUs.remove(GPU)
-            return GPUs
+            return {"message": "GPU deleted", "GPU": GPU}
+    return {"error": "GPU not found"}
+
+#function to update a graphic card
+@app.put("/update/{name}/{price}/{memory}/{power}")
+async def update (name: str, price: int, memory: int, power: int):
+    for GPU in GPUs:
+        if GPU.name == name:
+            GPU.price = price
+            GPU.memory = memory
+            GPU.power = power
+            return {"message": "GPU updated", "GPU": GPU}
     return {"error": "GPU not found"}
