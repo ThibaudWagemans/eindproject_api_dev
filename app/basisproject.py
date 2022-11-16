@@ -2,9 +2,23 @@ from fastapi import FastAPI
 from random import randint
 from pydantic import BaseModel
 import json
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
+origins = [
+    "http://localhost",
+    "http://localhost:8080",
+    "http://127.0.0.1:5500"
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["get", "post", "put", "delete"],
+    allow_headers=["*"],
+)
 
 #class for graphic cards
 class GraphicCard (BaseModel) :
@@ -39,7 +53,7 @@ async def get_random_GPU():
     return GPUs[randint(0, len(GPUs)-1)]
 
 #return a graphic card by name
-@app.get("/GPUs/{name}")
+@app.get("/GPUs/")
 async def get_GPU_by_name(name: str):
     for GPU in GPUs:
         if GPU.name == name:
@@ -55,7 +69,7 @@ async def get_GPU_by_name(name: str):
 #    return {"error": "GPU not found"}
 
 #return a graphic card by closest price
-@app.get("/GPUs/price/{price}")
+@app.get("/GPUs/price/")
 async def get_GPU_by_closest_price(price: int):
     closest = GPUs[0]
     for GPU in GPUs:
@@ -72,7 +86,7 @@ async def get_GPU_by_closest_price(price: int):
 #    return {"error": "GPU not found"}
 
 #return a graphic card by closest memory
-@app.get("/GPUs/memory/{memory}")
+@app.get("/GPUs/memory/")
 async def get_GPU_by_closest_memory(memory: int):
     closest = GPUs[0]
     for GPU in GPUs:
@@ -89,7 +103,7 @@ async def get_GPU_by_closest_memory(memory: int):
 #    return {"error": "GPU not found"}
 
 #return a graphic card by closest power
-@app.get("/GPUs/power/{power}")
+@app.get("/GPUs/power/")
 async def get_GPU_by_closest_power(power: int):
     closest = GPUs[0]
     for GPU in GPUs:
@@ -98,7 +112,7 @@ async def get_GPU_by_closest_power(power: int):
     return {"closest to given power": closest}
 
 #function to add a graphic card
-@app.post("/add/{name}/{price}/{memory}/{power}")
+@app.post("/add/")
 async def add (name: str, price: int, memory: int, power: int):
     #check if the graphic card already exists
     for GPU in GPUs:
@@ -109,7 +123,7 @@ async def add (name: str, price: int, memory: int, power: int):
     return {"message": "GPU added", "GPU": newGPU}
 
 #function to delete a graphic card
-@app.delete("/delete/{name}")
+@app.delete("/delete/")
 async def delete (name: str):
     for GPU in GPUs:
         if GPU.name == name:
@@ -118,7 +132,7 @@ async def delete (name: str):
     return {"error": "GPU not found"}
 
 #function to update a graphic card
-@app.put("/update/{name}/{price}/{memory}/{power}")
+@app.put("/update/")
 async def update (name: str, price: int, memory: int, power: int):
     for GPU in GPUs:
         if GPU.name == name:
