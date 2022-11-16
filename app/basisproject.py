@@ -47,38 +47,55 @@ async def get_GPU_by_name(name: str):
     return {"error": "GPU not found"}
 
 #return a graphic card by price
-@app.get("/GPUs/price/{price}")
-async def get_GPU_by_price(price: int):
-    for GPU in GPUs:
-        if GPU.price == price:
-            return GPU
-    return {"error": "GPU not found"}
+#@app.get("/GPUs/price/{price}")
+#async def get_GPU_by_price(price: int):
+#    for GPU in GPUs:
+#        if GPU.price == price:
+#            return GPU
+#    return {"error": "GPU not found"}
 
 #return a graphic card by closest price
-@app.get("/GPUs/price/closest/{price}")
+@app.get("/GPUs/price/{price}")
 async def get_GPU_by_closest_price(price: int):
     closest = GPUs[0]
     for GPU in GPUs:
         if abs(GPU.price - price) < abs(closest.price - price):
             closest = GPU
-    return closest
+    return {"closest to given price": closest}
 
 #return a graphic card by memory
+#@app.get("/GPUs/memory/{memory}")
+#async def get_GPU_by_memory(memory: int):
+#    for GPU in GPUs:
+#        if GPU.memory == memory:
+#            return GPU
+#    return {"error": "GPU not found"}
+
+#return a graphic card by closest memory
 @app.get("/GPUs/memory/{memory}")
-async def get_GPU_by_memory(memory: int):
+async def get_GPU_by_closest_memory(memory: int):
+    closest = GPUs[0]
     for GPU in GPUs:
-        if GPU.memory == memory:
-            return GPU
-    return {"error": "GPU not found"}
+        if abs(GPU.memory - memory) < abs(closest.memory - memory):
+            closest = GPU
+    return {"closest to given memory": closest}
 
 #return a graphic card by power
-@app.get("/GPUs/power/{power}")
-async def get_GPU_by_power(power: int):
-    for GPU in GPUs:
-        if GPU.power == power:
-            return GPU
-    return {"error": "GPU not found"}
+#@app.get("/GPUs/power/{power}")
+#async def get_GPU_by_power(power: int):
+#    for GPU in GPUs:
+#        if GPU.power == power:
+#            return GPU
+#    return {"error": "GPU not found"}
 
+#return a graphic card by closest power
+@app.get("/GPUs/power/{power}")
+async def get_GPU_by_closest_power(power: int):
+    closest = GPUs[0]
+    for GPU in GPUs:
+        if abs(GPU.power - power) < abs(closest.power - power):
+            closest = GPU
+    return {"closest to given power": closest}
 
 #function to add a graphic card
 @app.post("/add/{name}/{price}/{memory}/{power}")
