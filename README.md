@@ -10,6 +10,6 @@
     <br />
     <a href="https://github.com/ThibaudWagemans/basisproject_front_end">github Front-end repo</a>
     ·
-    <a href="https://thibaudwagemans.github.io/basisproject_front_end/basisproject.html/docs">API docs (get,post,delete,put)</a>
+    <a href="https://basisproject-service-thibaudwagemans.cloud.okteto.net/docs">API docs (get,post,delete,put)</a>
   </p>
 </div>
