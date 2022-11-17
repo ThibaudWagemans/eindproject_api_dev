@@ -11,14 +11,13 @@ origins = [
     "http://localhost:8080",
     "http://127.0.0.1:5500"
     "https://thibaudwagemans.github.io"
-    "https://localhost.tiangolo.com/",
 ]
 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
     allow_credentials=True,
-    allow_methods=["*"],
+    allow_methods=["POST", "GET", "PUT", "DELETE"],
     allow_headers=["*"],
 )
 
