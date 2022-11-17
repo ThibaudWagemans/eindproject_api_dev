@@ -33,7 +33,7 @@
       </ul>
     </li>
    <li>
-     <a href="##algemen">algemen eisen</a>
+     <a href="#algemeen">algemen eisen</a>
    </li>
   </ol>
 </details>
