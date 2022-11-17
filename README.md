@@ -36,7 +36,7 @@
      <a href="#algemeen">algemen eisen</a>
     </li>
     <li>
-     <a href="#mijn INFO">mijn INFO</a>
+     <a href="#INFO">mijn INFO</a>
     </li>
   </ol>
 </details>
@@ -79,7 +79,7 @@ Ik heb voor het thema GPUs gekozen omdat ik dit interessant vind en dat ik hier 
 - [ ] Interactie van je API met een andere externe service, API of databank (+15%)
 - [ ] Eigen inspiratie… (+?%)
 
-# Mijn INFO
+# INFO
 
 - <a href="https://github.com/ThibaudWagemans/basisproject_api_dev">Mijn GitHub repository voor de api</a>
 - <a href="https://github.com/ThibaudWagemans/basisproject_front_end">Mijn GitHub repository voor de front-end</a>
