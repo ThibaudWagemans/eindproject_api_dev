@@ -32,12 +32,14 @@
         </li>
       </ul>
     </li>
-   <li>
+    <li>
      <a href="#algemeen">algemen eisen</a>
-   </li>
+    </li>
+    <li>
+     <a href="#JOUW INFO">JOUW INFO</a>
+    </li>
   </ol>
 </details>
-
 
 <!-- Over dit project -->
 ## Over dit project
@@ -77,3 +79,9 @@ Ik heb voor het thema GPUs gekozen omdat ik dit interessant vind en dat ik hier 
 - [ ] Interactie van je API met een andere externe service, API of databank (+15%)
 - [ ] Eigen inspiratie… (+?%)
 
+#JOUW INFO
+
+- <a href="https://github.com/ThibaudWagemans/basisproject_api_dev">Mijn GitHub repository voor de api</a>
+- <a href="https://github.com/ThibaudWagemans/basisproject_front_end">Mijn GitHub repository voor de front-end</a>
+- <a href="https://basisproject-service-thibaudwagemans.cloud.okteto.net">Mijn hosted API link</a>
+- <a href="https://thibaudwagemans.github.io/basisproject_front_end/basisproject.html">Mijn front-end link</a>
