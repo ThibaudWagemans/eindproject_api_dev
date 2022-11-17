@@ -36,7 +36,7 @@
      <a href="#algemeen">algemen eisen</a>
     </li>
     <li>
-     <a href="#mijn INFO">JOUW INFO</a>
+     <a href="#mijn INFO">mijn INFO</a>
     </li>
   </ol>
 </details>
