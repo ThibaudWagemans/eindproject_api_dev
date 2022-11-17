@@ -27,11 +27,12 @@
         <li>
           <a href="#front-end-api">front-end</a>
         </li>
+        <li>
+          <a href="#postman">Postman</a>
+        </li>
       </ul>
     </li>
-    <li>
-      <a href="#postman">Postman</a>
-    </li>
+
   </ol>
 </details>
 
