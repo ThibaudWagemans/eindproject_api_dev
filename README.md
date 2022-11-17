@@ -67,3 +67,12 @@
     </li>
   </ol>
 </details>
+
+
+<!-- Over dit project -->
+## Over dit project
+
+Ik heb voor het thema GPUs gekozen omdat ik dit interessant vind en dat ik hier wel enkele dingen mee kon verzinnen.
+
+
+
