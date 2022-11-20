@@ -75,6 +75,12 @@
 ## screenshots openAPI docs
 
 ![image](https://user-images.githubusercontent.com/57669221/202906070-31ac84d5-94e6-4df2-a485-7cfaef0b2e17.png)
+![image](https://user-images.githubusercontent.com/57669221/202906250-b18034c3-97ac-434a-8063-46a412333067.png)
+![image](https://user-images.githubusercontent.com/57669221/202906280-019872a6-9885-4c8d-9bbc-cc0e49b57199.png)
+![image](https://user-images.githubusercontent.com/57669221/202906305-4e670bb9-910c-428e-bc8d-0a2f8ab9762a.png)
+![image](https://user-images.githubusercontent.com/57669221/202906343-0d745782-907b-4d4e-b0d6-1e255991a3ce.png)
+![image](https://user-images.githubusercontent.com/57669221/202906389-c21ba7f4-2ed3-414e-afeb-20d9878e5eeb.png)
+
 
 
 ## screenshots website
@@ -95,7 +101,7 @@
 
 - [x] Minstens 2 GET endpoints 
 - [x] Minstens 1 POST endpoint met class(es)
-- [x] Maximaal gebruik van validaties. Gebruik van response model wanneer aangewezen.
+- [ ] Maximaal gebruik van validaties. Gebruik van response model wanneer aangewezen.
 - [x] Logisch gebruik van path parameters, query parameters en body
 
 ## Deploying 
