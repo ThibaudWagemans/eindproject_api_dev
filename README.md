@@ -55,8 +55,8 @@
 - het doel is een korte samenvatting te hebben van de speccificaties van de verscillende modellen en moest het zijn er ook nog toe te voegen of te verwijderen
 
 
-## Methods
-# GET
+# Methods
+## GET
 - ik heb 6 verschillende GET methodes
 - GET GPUs: geeft de lijst van alles verschillende modellen
 - Get GPUs/random: geeft een random GPU uit de lijst
@@ -65,13 +65,13 @@
 - GET GPUs/memory: geeft de naame en specs van de GPU die het dichtste bij de opgegeven memory zit
 - GET GPUs/memory: geeft de naame en specs van de GPU die het dichtste bij de opgegeven power zit
 
-# POST
+## POST
 - hier heb ik gekozen voor een add functie, hier geef je een naam, memory, prijs en power op en deze nieuwe GPU word toegevoegd aan de lijst
 
-# delete
+## delete
 - hier geef je de naam in van de GPU (uit de lijst) die je wilt verwijderen
 
-# put
+## put
 - hier geef je de naam van een GPU in waarvan je de waardes wilt aanpassen
 
 ## screenshots postman
