@@ -33,6 +33,9 @@
       </ul>
     </li>
     <li>
+     <a href="#methods">methods</a>
+    </li>
+    <li>
      <a href="#algemeen">algemen eisen</a>
     </li>
     <li>
