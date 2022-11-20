@@ -44,8 +44,29 @@
 <!-- Over dit project -->
 ## Over dit project
 
-Ik heb voor het thema GPUs gekozen omdat ik dit interessant vind en dat ik hier wel enkele dingen mee kon verzinnen.
+- het thema van mijn prject is grafische kaarten van NVIDIA
+- zoals (bijna) elk jaar is NVIDIA (team green) weer met een nieuwe reeks grafiscche kaarten uitgekomen
+- het doel is een korte samenvatting te hebben van de speccificaties van de verscillende modellen en moest het zijn er ook nog toe te voegen of te verwijderen
 
+
+## Methods
+#GET
+- ik heb 6 verschillende GET methodes
+- GET GPUs: geeft de lijst van alles verschillende modellen
+- Get GPUs/random: geeft een random GPU uit de lijst
+- GET GPUs/ : geeft de specs van de ingegeve GPU
+- GET GPUs/price/: geeft de naame en specs van de GPU die het dichtste bij de opgegeven prijs zit
+- GET GPUs/memory: geeft de naame en specs van de GPU die het dichtste bij de opgegeven memory zit
+- GET GPUs/memory: geeft de naame en specs van de GPU die het dichtste bij de opgegeven power zit
+
+#POST
+- hier heb ik gekozen voor een add functie, hier geef je een naam, memory, prijs en power op en deze nieuwe GPU word toegevoegd aan de lijst
+
+#delete
+- hier geef je de naam in van de GPU (uit de lijst) die je wilt verwijderen
+
+#put
+- hier geef je de naam van een GPU in waarvan je de waardes wilt aanpassen
 
 # Algemene eisen & Documentatie (+65%) [Wat de leerling denk dat goed is gegaan]
 ## Algemeen
