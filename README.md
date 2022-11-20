@@ -68,7 +68,7 @@
 # put
 - hier geef je de naam van een GPU in waarvan je de waardes wilt aanpassen
 
-## screenshots postmane
+## screenshots postman
 
 ![image](https://user-images.githubusercontent.com/57669221/202907010-beeb89f4-c04b-4045-aafa-46b8b7fa7999.png)
 ![image](https://user-images.githubusercontent.com/57669221/202907137-f8ac55da-affa-46cf-aef2-ed52e6eb6d03.png)
