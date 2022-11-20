@@ -20,6 +20,9 @@
   <ol>
     <li>
       <a href="#over-dit-project">Over dit project</a>
+    </li>
+    <li>
+     <a href="#methods">methods</a>
       <ul>
         <li>
           <a href="#back-end-api">back-end API</a>
@@ -31,9 +34,6 @@
           <a href="#postman">Postman</a>
         </li>
       </ul>
-    </li>
-    <li>
-     <a href="#methods">methods</a>
     </li>
     <li>
      <a href="#algemeen">algemen eisen</a>
