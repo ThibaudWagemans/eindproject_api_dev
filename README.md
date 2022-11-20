@@ -52,7 +52,7 @@
 
 - het thema van mijn project is grafische kaarten van NVIDIA
 - zoals (bijna) elk jaar is NVIDIA (team green) weer met een nieuwe reeks grafische kaarten uitgekomen
-- het doel is een korte samenvatting te hebben van de specificaties van de verschillende modellen en moest het zijn er ook nog toe te voegen, aan te passen of te     verwijderen (en de mogelijkheid te hebben een GPU te zoeken op bepaalde eigenschappen)
+- het doel is een korte samenvatting te hebben van de specificaties van de verschillende modellen en moest het zijn er ook nog toe te voegen, aan te passen of     verwijderen (en de mogelijkheid te hebben een GPU te zoeken op bepaalde eigenschappen)
 
 
 # Methods
