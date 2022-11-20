@@ -66,13 +66,13 @@
 - GET GPUs/memory: geeft de naame en specs van de GPU die het dichtste bij de opgegeven power zit
 
 ## POST
-- POST add/:hier heb ik gekozen voor een add functie, hier geef je een naam, memory, prijs en power op en deze nieuwe GPU word toegevoegd aan de lijst
+- POST add/: hier heb ik gekozen voor een add functie, hier geef je een naam, memory, prijs en power op en deze nieuwe GPU word toegevoegd aan de lijst
 
 ## delete
-- DELETE delete/:hier geef je de naam in van de GPU (uit de lijst) die je wilt verwijderen
+- DELETE delete/: hier geef je de naam in van de GPU (uit de lijst) die je wilt verwijderen
 
 ## put
-- PUT update/:hier geef je de naam van een GPU in waarvan je de waardes wilt aanpassen
+- PUT update/: hier geef je de naam van een GPU in waarvan je de waardes wilt aanpassen
 
 ## screenshots postman
 
