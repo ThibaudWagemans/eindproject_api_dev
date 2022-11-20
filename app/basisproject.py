@@ -8,9 +8,13 @@ app = FastAPI()
 
 origins = [
     "http://localhost",
+    "https://localhost",
     "http://localhost:8080",
+    "http://localhost:8000",
     "http://127.0.0.1:5500"
-    "https://thibaudwagemans.github.io"
+    "https://localhost.tiangolo.com",
+    "https://thibaudwagemans.github.io",
+    "http://thibaudwagemans.github.io"
 ]
 
 app.add_middleware(
