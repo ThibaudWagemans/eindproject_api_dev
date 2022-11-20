@@ -51,8 +51,8 @@
 ## Over dit project
 
 - het thema van mijn project is grafische kaarten van NVIDIA
-- zoals (bijna) elk jaar is NVIDIA (team green) weer met een nieuwe reeks grafiscche kaarten uitgekomen
-- het doel is een korte samenvatting te hebben van de speccificaties van de verscillende modellen en moest het zijn er ook nog toe te voegen of te verwijderen
+- zoals (bijna) elk jaar is NVIDIA (team green) weer met een nieuwe reeks grafische kaarten uitgekomen
+- het doel is een korte samenvatting te hebben van de specificaties van de verschillende modellen en moest het zijn er ook nog toe te voegen of te verwijderen
 
 
 # Methods
