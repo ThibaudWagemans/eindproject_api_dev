@@ -68,6 +68,20 @@
 # put
 - hier geef je de naam van een GPU in waarvan je de waardes wilt aanpassen
 
+## screenshots postmane
+
+
+
+## screenshots openAPI docs
+
+![image](https://user-images.githubusercontent.com/57669221/202906070-31ac84d5-94e6-4df2-a485-7cfaef0b2e17.png)
+
+
+## screenshots website
+
+![image](https://user-images.githubusercontent.com/57669221/202906119-a14d7f93-4bb6-4de9-a3d2-ae1b4e6b43e1.png)
+
+
 # Algemene eisen & Documentatie (+65%) [Wat de leerling denk dat goed is gegaan]
 ## Algemeen
 
