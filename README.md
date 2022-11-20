@@ -114,8 +114,8 @@
 - [x] 1 API in een GitHub repository
 - [x] 1 front-end in een GitHub repository
 - [x] Beschrijving van het gekozen thema, je API en je front-end + link naar hosted API, link naar front-end GitHub repository en link naar hosted front-end op GitHub README.md
-- [ ] Aantoonbare werking totale API door screenshots van Postman requests op GitHub README.md
-- [ ] Volledige OpenAPI docs screenshot(s) op GitHub README.md
+- [x] Aantoonbare werking totale API door screenshots van Postman requests op GitHub README.md
+- [x] Volledige OpenAPI docs screenshot(s) op GitHub README.md
 
 ## REST API
 
