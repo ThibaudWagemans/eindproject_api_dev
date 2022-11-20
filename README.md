@@ -58,9 +58,9 @@
 # Methods
 ## GET
 - ik heb 6 verschillende GET methodes
-- GET GPUs :(geef de naam van een GPU in) geeft de lijst van alles verschillende modellen
+- GET GPUs : geeft de lijst van alles verschillende modellen
 - Get GPUs/random : geeft een random GPU uit de lijst
-- GET GPUs/ : geeft de specs van de ingegeve GPU
+- GET GPUs/ :geeft de specs van de ingegeve GPU (naam)
 - GET GPUs/price/ : geeft de naam en specs van de GPU die het dichtste bij de opgegeven prijs zit
 - GET GPUs/memory/ : geeft de naam en specs van de GPU die het dichtste bij de opgegeven memory zit
 - GET GPUs/power/ : geeft de naam en specs van de GPU die het dichtste bij de opgegeven power zit
