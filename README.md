@@ -61,9 +61,9 @@
 - GET GPUs: geeft de lijst van alles verschillende modellen
 - Get GPUs/random: geeft een random GPU uit de lijst
 - GET GPUs/ : geeft de specs van de ingegeve GPU
-- GET GPUs/price/: geeft de naame en specs van de GPU die het dichtste bij de opgegeven prijs zit
-- GET GPUs/memory: geeft de naame en specs van de GPU die het dichtste bij de opgegeven memory zit
-- GET GPUs/memory: geeft de naame en specs van de GPU die het dichtste bij de opgegeven power zit
+- GET GPUs/price/: geeft de naam en specs van de GPU die het dichtste bij de opgegeven prijs zit
+- GET GPUs/memory: geeft de naam en specs van de GPU die het dichtste bij de opgegeven memory zit
+- GET GPUs/memory: geeft de naam en specs van de GPU die het dichtste bij de opgegeven power zit
 
 ## POST
 - POST add/: hier heb ik gekozen voor een add functie, hier geef je een naam, memory, prijs en power op en deze nieuwe GPU word toegevoegd aan de lijst
