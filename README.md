@@ -25,13 +25,16 @@
      <a href="#methods">methods</a>
       <ul>
         <li>
-          <a href="#back-end-api">back-end API</a>
+          <a href="#GET">GET</a>
         </li>
         <li>
-          <a href="#front-end-api">front-end</a>
+          <a href="#POST">POST</a>
         </li>
         <li>
-          <a href="#postman">Postman</a>
+          <a href="#delete">delete</a>
+        </li>
+        <li>
+          <a href="#put">put</a>
         </li>
       </ul>
     </li>
