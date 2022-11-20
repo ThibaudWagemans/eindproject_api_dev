@@ -70,6 +70,15 @@
 
 ## screenshots postmane
 
+![image](https://user-images.githubusercontent.com/57669221/202907010-beeb89f4-c04b-4045-aafa-46b8b7fa7999.png)
+![image](https://user-images.githubusercontent.com/57669221/202907137-f8ac55da-affa-46cf-aef2-ed52e6eb6d03.png)
+![image](https://user-images.githubusercontent.com/57669221/202907179-3205d765-de83-442d-b914-c6e453cdc841.png)
+![image](https://user-images.githubusercontent.com/57669221/202907216-7110848e-a3ba-4991-8212-42990ecad09e.png)
+![image](https://user-images.githubusercontent.com/57669221/202907262-b5f84c7d-90c8-4b37-8ec2-b08a5bcfb1fc.png)
+![image](https://user-images.githubusercontent.com/57669221/202907282-18ef7080-056a-4507-87d9-2ed572523c85.png)
+![image](https://user-images.githubusercontent.com/57669221/202907321-22e373d2-3dac-41d6-94b2-683d282268b8.png)
+![image](https://user-images.githubusercontent.com/57669221/202907351-bb1ff300-21e1-451d-b2b3-747c0d2e856e.png)
+![image](https://user-images.githubusercontent.com/57669221/202907413-2a8c5342-86d3-4f0d-b3ad-7dc9ec884d7d.png)
 
 
 ## screenshots openAPI docs
@@ -86,9 +95,11 @@
 ![image](https://user-images.githubusercontent.com/57669221/202906859-d3789912-e2d6-47f2-a692-37cc8a2138ad.png)
 ![image](https://user-images.githubusercontent.com/57669221/202906902-bd6ed202-6c49-4637-9f43-ed49709b248c.png)
 
-## screenshots website
+## screenshot website
 
-![image](https://user-images.githubusercontent.com/57669221/202906119-a14d7f93-4bb6-4de9-a3d2-ae1b4e6b43e1.png)
+![image](https://user-images.githubusercontent.com/57669221/202907095-c14fb835-64fe-4762-b467-6e216b6546bd.png)
+
+
 
 
 # Algemene eisen & Documentatie (+65%) [Wat de leerling denk dat goed is gegaan]
