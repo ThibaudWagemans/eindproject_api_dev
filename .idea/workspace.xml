@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="62b80b33-a5cc-48c1-9e75-778a74b6d974" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/app/basisproject.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/basisproject.py" afterDir="false" />
-    </list>
+    <list default="true" id="62b80b33-a5cc-48c1-9e75-778a74b6d974" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,7 +23,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/school/API dev/basisproject",
+    "last_opened_file_path": "D:/school/API dev/eindproject_api_dev",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>
@@ -38,6 +36,7 @@
       <option name="presentableId" value="Default" />
       <updated>1668957955885</updated>
       <workItem from="1668957957890" duration="3095000" />
+      <workItem from="1672849208509" duration="163000" />
     </task>
     <servers />
   </component>
