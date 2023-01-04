@@ -4,3 +4,8 @@ services:
   image: thibaudw/basisproject_api
   ports:
     - "8000:8000"
+  volumes:
+    - sqlite_gpus_volume:/code/sqlitedb
+
+volumes:
+  sqlite_gpus_volume:
