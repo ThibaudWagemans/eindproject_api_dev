@@ -83,15 +83,25 @@ async def get_GPU_by_closest_power(power: int, db: Session = Depends(get_db)):
 
 #post a new graphic card
 @app.post("/GPUs")
-async def create_GPU(GPU: schemas.GraphicCard, db: Session = Depends(get_db)):
-    return crud.create_GPU(db, GPU)
+async def create_gpu(GPU: schemas.GPUs, db: Session = Depends(get_db)):
+    return crud.create_gpu(db, GPU)
 
 #update a graphic card by name
 @app.put("/GPUs/")
-async def update_GPU_by_name(name: str, GPU: schemas.GraphicCard, db: Session = Depends(get_db)):
+async def update_GPU_by_name(name: str, GPU: schemas.GPUs, db: Session = Depends(get_db)):
     return crud.update_GPU_by_name(db, name, GPU)
 
 #delete a graphic card by name
 @app.delete("/GPUs/")
 async def delete_GPU_by_name(name: str, db: Session = Depends(get_db)):
     return crud.delete_GPU_by_name(db, name)
+
+#post a new user
+@app.post("/users")
+async def create_user(user: schemas.User, db: Session = Depends(get_db)):
+    return crud.create_user(db, user)
+
+#get all users
+@app.get("/users")
+async def get_users(db: Session = Depends(get_db)):
+    return crud.get_users(db)

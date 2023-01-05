@@ -1,53 +1,45 @@
 from pydantic import BaseModel
 
-class GraphicCard (BaseModel) :
-    name: str
-    price: int
-    memory: int
-    power: int
 
+#classes van users
 class User (BaseModel) :
     username: str
     password: str
 
-class GraphicCard (GraphicCard) :
+class Usercreate (User) :
+    pass
+
+#classes van GPUs
+class GPUs (BaseModel) :
     name: str
     price: int
     memory: int
     power: int
 
-class User (User) :
-    username: str
-    password: str
+class addGraphicCard (GPUs) :
+    pass
 
-class updateGraphicCard (BaseModel) :
-    name: str
-    price: int
-    memory: int
-    power: int
+class updateGraphicCard (GPUs) :
+    pass
 
 class deleteGraphicCard (BaseModel) :
     name: str
 
-class addGraphicCard (BaseModel) :
-    name: str
-    price: int
-    memory: int
-    power: int
 
-class updateGraphicCard (updateGraphicCard) :
+#classes van releaseDates
+class releaseDate (BaseModel) :
     name: str
-    price: int
-    memory: int
-    power: int
+    date: str
 
-class deleteGraphicCard (deleteGraphicCard) :
-    name: str
+class addReleaseDate (releaseDate) :
+    pass
 
-class addGraphicCard (addGraphicCard) :
+class updateReleaseDate (releaseDate) :
+    pass
+
+class deleteReleaseDate (BaseModel) :
     name: str
-    price: int
-    memory: int
-    power: int
+    date: str
+
 
 
