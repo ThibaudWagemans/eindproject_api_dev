@@ -65,22 +65,22 @@ async def get_random_GPU(db: Session = Depends(get_db)):
     return crud.get_random_GPU(db)
 
 #return a graphic card by name
-@app.get("/GPUs/")
+@app.get("/GPUs")
 async def get_GPU(name: str, db: Session = Depends(get_db)):
     return crud.get_GPU(db, name)
 
 #return a graphic card by closest price
-@app.get("/GPUs/price/")
+@app.get("/GPUs/price")
 async def get_GPU_by_closest_price(price: int, db: Session = Depends(get_db)):
     return crud.get_gpu_by_closest_price(db, price)
 
 #return a graphic card by closest memory
-@app.get("/GPUs/memory/")
+@app.get("/GPUs/memory")
 async def get_GPU_by_closest_memory(memory: int, db: Session = Depends(get_db)):
     return crud.get_gpu_by_closest_memory(db, memory)
 
 #return a graphic card by closest power
-@app.get("/GPUs/power/")
+@app.get("/GPUs/power")
 async def get_GPU_by_closest_power(power: int, db: Session = Depends(get_db)):
     return crud.get_gpu_by_closest_power(db, power)
 
@@ -90,12 +90,12 @@ async def create_gpu(GPU: schemas.GPUs, db: Session = Depends(get_db)):
     return crud.create_gpu(db, GPU)
 
 #update a graphic card by name
-@app.put("/update_GPU/")
+@app.put("/update_GPU")
 async def update_GPU(GPU: schemas.GPUs, db: Session = Depends(get_db)):
     return crud.update_gpu(db, GPU)
 
 #delete a graphic card by name
-@app.delete("/delete_GPU/")
+@app.delete("/delete_GPU")
 async def delete_GPU(name: str, db: Session = Depends(get_db)):
     return crud.delete_GPU(db, name)
 
@@ -110,7 +110,7 @@ async def get_users(db: Session = Depends(get_db)):
     return crud.get_users(db)
 
 #delete user
-@app.delete("/delete_user/")
+@app.delete("/delete_user")
 async def delete_user(username: str, db: Session = Depends(get_db)):
     return crud.delete_user(db, username)
 
@@ -125,6 +125,6 @@ async def get_release_dates(db: Session = Depends(get_db)):
     return crud.get_release_dates(db)
 
 #delete release date
-@app.delete("/delete_releaseDate/")
+@app.delete("/delete_releaseDate")
 async def delete_release_date(name: str, db: Session = Depends(get_db)):
     return crud.delete_release_date(db, name)
