@@ -1,3 +1,11 @@
+import os
+from app import crud, models, schemas
+#import crud
+#import models
+#import schemas
+#import auth
+from app.database import SessionLocal, engine
+
 from fastapi import Depends, FastAPI, HTTPException
 from random import randint
 from pydantic import BaseModel
@@ -5,13 +13,6 @@ import json
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 
-from app import crud, models, schemas
-#import crud
-#import models
-#import schemas
-#import auth
-from database import SessionLocal, engine
-import os
 
 if not os.path.exists('.\sqlitedb'):
     os.makedirs('.\sqlitedb')
