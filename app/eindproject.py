@@ -14,8 +14,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 
 
-if not os.path.exists('.\sqlitedb'):
-    os.makedirs('.\sqlitedb')
+if not os.path.exists('.\code\app\db\sqlitedb'):
+    os.makedirs('.\code\app\db\sqlitedb')
 
 #"sqlite:///./sqlitedb/sqlitedata.db"
 models.Base.metadata.create_all(bind=engine)
