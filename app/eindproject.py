@@ -5,11 +5,13 @@ import json
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 
+import os
 import crud
 import models
 import schemas
 from database import SessionLocal, engine
-import os
+import auth
+
 
 if not os.path.exists('.\sqlitedb'):
     os.makedirs('.\sqlitedb')
