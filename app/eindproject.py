@@ -5,7 +5,7 @@ import json
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 
-ifrom app import crud, models, schemas
+from app import crud, models, schemas
 #import crud
 #import models
 #import schemas
