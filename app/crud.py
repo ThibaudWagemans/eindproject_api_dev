@@ -1,8 +1,9 @@
 from sqlalchemy.orm import Session
 from sqlalchemy.sql.expression import func
 
-import models
-import schemas
+#import models
+#import schemas
+from app import models, schemas
 
 
 def get_GPUs(db: Session, skip: int = 0, limit: int = 100):
