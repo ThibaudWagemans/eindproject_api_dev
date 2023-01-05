@@ -63,23 +63,23 @@ async def get_random_GPU(db: Session = Depends(get_db)):
 
 #return a graphic card by name
 @app.get("/GPUs/")
-async def get_GPU_by_name(name: str, db: Session = Depends(get_db)):
-    return crud.get_GPU_by_name(db, name)
+async def get_GPU(name: str, db: Session = Depends(get_db)):
+    return crud.get_GPU(db, name)
 
 #return a graphic card by closest price
 @app.get("/GPUs/price/")
 async def get_GPU_by_closest_price(price: int, db: Session = Depends(get_db)):
-    return crud.get_GPU_by_closest_price(db, price)
+    return crud.get_gpu_by_closest_price(db, price)
 
 #return a graphic card by closest memory
 @app.get("/GPUs/memory/")
 async def get_GPU_by_closest_memory(memory: int, db: Session = Depends(get_db)):
-    return crud.get_GPU_by_closest_memory(db, memory)
+    return crud.get_gpu_by_closest_memory(db, memory)
 
 #return a graphic card by closest power
 @app.get("/GPUs/power/")
 async def get_GPU_by_closest_power(power: int, db: Session = Depends(get_db)):
-    return crud.get_GPU_by_closest_power(db, power)
+    return crud.get_gpu_by_closest_power(db, power)
 
 #post a new graphic card
 @app.post("/GPUs")
@@ -87,17 +87,17 @@ async def create_gpu(GPU: schemas.GPUs, db: Session = Depends(get_db)):
     return crud.create_gpu(db, GPU)
 
 #update a graphic card by name
-@app.put("/GPUs/")
-async def update_GPU_by_name(name: str, GPU: schemas.GPUs, db: Session = Depends(get_db)):
-    return crud.update_GPU_by_name(db, name, GPU)
+@app.put("/update_GPU/")
+async def update_GPU(GPU: schemas.GPUs, db: Session = Depends(get_db)):
+    return crud.update_gpu(db, GPU)
 
 #delete a graphic card by name
-@app.delete("/GPUs/")
-async def delete_GPU_by_name(name: str, db: Session = Depends(get_db)):
-    return crud.delete_GPU_by_name(db, name)
+@app.delete("/delete_GPU/")
+async def delete_GPU(name: str, db: Session = Depends(get_db)):
+    return crud.delete_GPU(db, name)
 
 #post a new user
-@app.post("/users")
+@app.post("/createusers")
 async def create_user(user: schemas.User, db: Session = Depends(get_db)):
     return crud.create_user(db, user)
 
@@ -105,3 +105,23 @@ async def create_user(user: schemas.User, db: Session = Depends(get_db)):
 @app.get("/users")
 async def get_users(db: Session = Depends(get_db)):
     return crud.get_users(db)
+
+#delete user
+@app.delete("/delete_user/")
+async def delete_user(username: str, db: Session = Depends(get_db)):
+    return crud.delete_user(db, username)
+
+#post a new release date
+@app.post("/createReleaseDate")
+async def create_release_date(releaseDate: schemas.releaseDate, db: Session = Depends(get_db)):
+    return crud.create_release_date(db, releaseDate)
+
+#get all release dates
+@app.get("/releaseDates")
+async def get_release_dates(db: Session = Depends(get_db)):
+    return crud.get_release_dates(db)
+
+#delete release date
+@app.delete("/delete_releaseDate/")
+async def delete_release_date(name: str, db: Session = Depends(get_db)):
+    return crud.delete_release_date(db, name)

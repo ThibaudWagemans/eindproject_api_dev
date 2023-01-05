@@ -9,6 +9,9 @@ class User (BaseModel) :
 class Usercreate (User) :
     pass
 
+class delete_user (User) :
+    pass
+
 #classes van GPUs
 class GPUs (BaseModel) :
     name: str
@@ -19,11 +22,13 @@ class GPUs (BaseModel) :
 class addGraphicCard (GPUs) :
     pass
 
-class updateGraphicCard (GPUs) :
-    pass
+class updateGraphicCard (BaseModel) :
+    price: int
+    memory: int
+    power: int
 
-class deleteGraphicCard (BaseModel) :
-    name: str
+class deleteGraphicCard (GPUs) :
+    pass
 
 
 #classes van releaseDates

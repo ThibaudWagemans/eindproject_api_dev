@@ -11,17 +11,16 @@ class GPUs(Base):
     memory = Column(Integer, index=True)
     power = Column(Integer, index=True)
 
-    releaseDates = relationship("releaseDates", back_populates="GPUs")
+    releaseDate = relationship("releaseDate", back_populates="GPUs")
 
 
-class releaseDates(Base):
-    __tablename__ = "releaseDates"
+class releaseDate(Base):
+    __tablename__ = "releaseDate"
 
     name = Column(String, ForeignKey("GPUs.name"))
     date = Column(String, primary_key=True, index=True)
-    GPU = relationship("GPUs", back_populates="releaseDates")
 
-    GPUs = relationship("GPUs", back_populates="releaseDates")
+    GPUs = relationship("GPUs", back_populates="releaseDate")
 
 
 class User(Base):
