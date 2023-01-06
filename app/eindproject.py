@@ -133,7 +133,7 @@ async def create_user(user: schemas.Usercreate, db: Session = Depends(get_db)):
 
 #get all users
 @app.get("/users")
-async def get_users(db: Session = Depends(get_db), token: str = Depends(oauth2_scheme)):
+async def get_users(db: Session = Depends(get_db)):
     return crud.get_users(db)
 
 #delete user
