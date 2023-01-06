@@ -66,7 +66,7 @@ async def get_random_GPU(db: Session = Depends(get_db)):
     return crud.get_random_GPU(db)
 
 #return a graphic card by name
-@app.get("/GPUs")
+@app.get("/GPU")
 async def get_GPU(name: str, db: Session = Depends(get_db)):
     return crud.get_GPU(db, name)
 
