@@ -76,9 +76,10 @@
 
 ## screenshots postman
 
-### GET
+![image](https://user-images.githubusercontent.com/57669221/211053493-11fecef7-90a6-4c34-8ac0-ae4f5f0bedbb.png)
 ![image](https://user-images.githubusercontent.com/57669221/211048994-7babb1ec-e528-46bb-845d-51252a1ae95a.png)
 ![image](https://user-images.githubusercontent.com/57669221/211048934-bf49b8f9-31c9-4442-84c7-91b7ea1c90e4.png)
+![image](https://user-images.githubusercontent.com/57669221/211053666-69afdd1c-0004-429f-8ce6-896f479457c4.png)
 ![image](https://user-images.githubusercontent.com/57669221/211049060-9a284c34-3b4e-4135-83e7-388666eb9321.png)
 ![image](https://user-images.githubusercontent.com/57669221/211049277-b782ad05-c24f-4fff-a159-5046f012b8ce.png)
 ![image](https://user-images.githubusercontent.com/57669221/211049595-056b6aa3-c2a8-4d03-8e31-706d829f5db7.png)
