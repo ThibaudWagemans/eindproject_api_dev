@@ -76,15 +76,23 @@
 
 ## screenshots postman
 
-![image](https://user-images.githubusercontent.com/57669221/202907010-beeb89f4-c04b-4045-aafa-46b8b7fa7999.png)
-![image](https://user-images.githubusercontent.com/57669221/202907137-f8ac55da-affa-46cf-aef2-ed52e6eb6d03.png)
-![image](https://user-images.githubusercontent.com/57669221/202907179-3205d765-de83-442d-b914-c6e453cdc841.png)
-![image](https://user-images.githubusercontent.com/57669221/202907216-7110848e-a3ba-4991-8212-42990ecad09e.png)
-![image](https://user-images.githubusercontent.com/57669221/202907262-b5f84c7d-90c8-4b37-8ec2-b08a5bcfb1fc.png)
-![image](https://user-images.githubusercontent.com/57669221/202907282-18ef7080-056a-4507-87d9-2ed572523c85.png)
-![image](https://user-images.githubusercontent.com/57669221/202907321-22e373d2-3dac-41d6-94b2-683d282268b8.png)
-![image](https://user-images.githubusercontent.com/57669221/202907351-bb1ff300-21e1-451d-b2b3-747c0d2e856e.png)
-![image](https://user-images.githubusercontent.com/57669221/202907413-2a8c5342-86d3-4f0d-b3ad-7dc9ec884d7d.png)
+### GET
+![image](https://user-images.githubusercontent.com/57669221/211048994-7babb1ec-e528-46bb-845d-51252a1ae95a.png)
+![image](https://user-images.githubusercontent.com/57669221/211048934-bf49b8f9-31c9-4442-84c7-91b7ea1c90e4.png)
+![image](https://user-images.githubusercontent.com/57669221/211049060-9a284c34-3b4e-4135-83e7-388666eb9321.png)
+![image](https://user-images.githubusercontent.com/57669221/211049277-b782ad05-c24f-4fff-a159-5046f012b8ce.png)
+![image](https://user-images.githubusercontent.com/57669221/211049595-056b6aa3-c2a8-4d03-8e31-706d829f5db7.png)
+![image](https://user-images.githubusercontent.com/57669221/211049699-0c0c38e0-5321-4bd1-8583-35c1603e6f5b.png)
+![image](https://user-images.githubusercontent.com/57669221/211049811-1a388b90-b638-47a6-a7e1-105a9effee14.png)
+![image](https://user-images.githubusercontent.com/57669221/211051701-c984cfc4-6689-4b25-8066-0ab13024c77b.png)
+![image](https://user-images.githubusercontent.com/57669221/211051938-e6b64908-ef1c-4ff1-8e17-e6de18eb4fa7.png)
+![image](https://user-images.githubusercontent.com/57669221/211052120-c36918ab-b31e-42c8-8de5-0d4be4ccb710.png)
+![image](https://user-images.githubusercontent.com/57669221/211052271-225a0e0d-0533-4afd-9243-33752cd8aab3.png)
+![image](https://user-images.githubusercontent.com/57669221/211052454-83539a8a-0dff-4d26-9772-fedc642fcaf9.png)
+![image](https://user-images.githubusercontent.com/57669221/211052646-f0d7d4c9-b491-4f9b-a3ca-2906f8c09d6a.png)
+![image](https://user-images.githubusercontent.com/57669221/211052729-3253b4f4-6ae4-43d7-8fd4-ef66dce69d5f.png)
+![image](https://user-images.githubusercontent.com/57669221/211052878-9a8c41b1-e384-4b35-8124-4e276a30708e.png)
+
 
 
 ## screenshots openAPI docs
