@@ -27,6 +27,27 @@ print("Tables created.......")
 
 app = FastAPI()
 
+origins = [
+    "http://localhost",
+    "https://localhost",
+    "http://localhost:8080",
+    "http://localhost:8000",
+    "http://127.0.0.1:5500"
+    "https://localhost.tiangolo.com",
+    "https://thibaudwagemans.github.io",
+    "http://thibaudwagemans.github.io"
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["POST", "GET", "PUT", "DELETE"],
+    allow_headers=["*"],
+)
+
+
+
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
 # Dependency
