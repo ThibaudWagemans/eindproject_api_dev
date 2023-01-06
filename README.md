@@ -5,10 +5,10 @@
   <p align="center">
     Gemaakt door Thibaud Wagemans
     <br />
-    <a href="https://thibaudwagemans.github.io/basisproject_front_end/basisproject.html"><strong>link live front-end»</strong></a>
+    <a href="https://thibaudwagemans.github.io/eindproject_front_end/"><strong>link live front-end»</strong></a>
     <br />
     <br />
-    <a href="https://github.com/ThibaudWagemans/basisproject_front_end">github Front-end repo</a>
+    <a href="https://github.com/ThibaudWagemans/eindproject_front_end.git">github Front-end repo</a>
     ·
     <a href="https://basisproject-service-thibaudwagemans.cloud.okteto.net/docs">API docs (get,post,delete,put)</a>
   </p>

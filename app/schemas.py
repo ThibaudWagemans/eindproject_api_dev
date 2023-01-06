@@ -4,31 +4,35 @@ from pydantic import BaseModel
 #classes van users
 class User (BaseModel) :
     username: str
-    password: str
+
 
 class Usercreate (User) :
-    pass
+    password: str
 
 class delete_user (User) :
-    username : str
-
-#classes van GPUs
-class GPUs (BaseModel) :
-    name: str
-    price: int
-    memory: int
-    power: int
-
-class addGraphicCard (GPUs) :
     pass
 
-class updateGraphicCard (BaseModel) :
+#classes van GPUs
+class GPUsBase (BaseModel) :
+    name: str
+
+class GPUs (GPUsBase) :
     price: int
     memory: int
     power: int
 
-class deleteGraphicCard (GPUs) :
-    name : str
+class addGraphicCard (GPUsBase) :
+    price: int
+    memory: int
+    power: int
+
+class updateGraphicCard (GPUsBase) :
+    price: int
+    memory: int
+    power: int
+
+class deleteGraphicCard (GPUsBase) :
+    pass
 
 
 #classes van releaseDates
@@ -42,7 +46,7 @@ class addReleaseDate (releaseDate) :
 class updateReleaseDate (releaseDate) :
     pass
 
-class deleteReleaseDate (releaseDate) :
+class deleteReleaseDate (BaseModel) :
     name: str
 
 

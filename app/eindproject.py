@@ -5,6 +5,7 @@ import json
 from sqlalchemy.orm import Session
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm, HTTPBasic, HTTPBasicCredentials
 
+
 from app import crud, models, schemas, auth
 import os
 #import crud
@@ -26,24 +27,7 @@ print("Tables created.......")
 
 app = FastAPI()
 
-origins = [
-    "http://localhost",
-    "https://localhost",
-    "http://localhost:8080",
-    "http://localhost:8000",
-    "http://127.0.0.1:5500"
-    "https://localhost.tiangolo.com",
-    "https://thibaudwagemans.github.io",
-    "http://thibaudwagemans.github.io"
-]
-
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=origins,
-    allow_credentials=True,
-    allow_methods=["POST", "GET", "PUT", "DELETE"],
-    allow_headers=["*"],
-)
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
 # Dependency
 def get_db():
@@ -52,6 +36,24 @@ def get_db():
         yield db
     finally:
         db.close()
+
+@app.post("/token")
+def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(get_db)):
+    #Try to authenticate the user
+    user = auth.authenticate_user(db, form_data.username, form_data.password)
+    if not user:
+        raise HTTPException(
+            status_code=401,
+            detail="Incorrect username or password",
+            headers={"WWW-Authenticate": "Bearer"},
+        )
+    # Add the JWT case sub with the subject(user)
+    access_token = auth.create_access_token(
+        data={"sub": user.username}
+    )
+    #Return the JWT as a bearer token to be placed in the headers
+    return {"access_token": access_token, "token_type": "bearer"}
+
 
 #test get hello world
 @app.get("/")
@@ -100,7 +102,7 @@ async def update_GPU(GPU: schemas.GPUs, db: Session = Depends(get_db)):
 
 #delete a graphic card by name
 @app.delete("/delete_GPU")
-async def delete_GPU(GPU: schemas.deleteGraphicCard, db: Session = Depends(get_db)):
+async def delete_GPU(GPU: schemas.deleteGraphicCard, db: Session = Depends(get_db), token: str = Depends(oauth2_scheme)):
     return crud.delete_gpu(db, GPU)
 
 #post a new user
@@ -110,12 +112,12 @@ async def create_user(user: schemas.User, db: Session = Depends(get_db)):
 
 #get all users
 @app.get("/users")
-async def get_users(db: Session = Depends(get_db)):
+async def get_users(db: Session = Depends(get_db), token: str = Depends(oauth2_scheme)):
     return crud.get_users(db)
 
 #delete user
 @app.delete("/delete_user")
-async def delete_user(user: schemas.delete_user, db: Session = Depends(get_db)):
+async def delete_user(user: schemas.delete_user, db: Session = Depends(get_db), token: str = Depends(oauth2_scheme)):
     return crud.delete_user(db, user)
 
 #post a new release date
@@ -130,5 +132,5 @@ async def get_release_dates(db: Session = Depends(get_db)):
 
 #delete release date
 @app.delete("/delete_releaseDate/")
-async def delete_release_date(releaseDate: schemas.deleteReleaseDate, db: Session = Depends(get_db)):
+async def delete_release_date(releaseDate: schemas.deleteReleaseDate, db: Session = Depends(get_db), token: str = Depends(oauth2_scheme)):
     return crud.delete_release_date(db, releaseDate)
