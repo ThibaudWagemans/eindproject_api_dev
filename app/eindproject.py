@@ -12,7 +12,7 @@ import os
 #import models
 #import schemas
 #import auth
-from database import SessionLocal, engine
+from app.database import SessionLocal, engine
 
 
 if not os.path.exists('.\sqlitedb'):
