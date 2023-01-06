@@ -1,12 +1,11 @@
-from fastapi import Depends, FastAPI, HTTPException
+from fastapi import Depends, FastAPI, HTTPException, status
 from random import randint
 from pydantic import BaseModel
 import json
-from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
-from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
+from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm, HTTPBasic, HTTPBasicCredentials
 
-from app import crud, models, schemas
+from app import crud, models, schemas, auth
 import os
 #import crud
 #import models
@@ -14,12 +13,16 @@ import os
 #import auth
 from app.database import SessionLocal, engine
 
-
+print("We are in the main.......")
 if not os.path.exists('.\sqlitedb'):
+    print("Making folder.......")
     os.makedirs('.\sqlitedb')
 
+print("Creating tables.......")
 #"sqlite:///./sqlitedb/sqlitedata.db"
 models.Base.metadata.create_all(bind=engine)
+print("Tables created.......")
+
 
 app = FastAPI()
 
