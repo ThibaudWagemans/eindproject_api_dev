@@ -39,9 +39,6 @@
       </ul>
     </li>
     <li>
-     <a href="#algemeen">algemen eisen</a>
-    </li>
-    <li>
      <a href="#INFO">mijn INFO</a>
     </li>
   </ol>
