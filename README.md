@@ -116,38 +116,6 @@
 ## screenshot website
 
 
-# Algemene eisen & Documentatie (+65%) [Wat de leerling denk dat goed is gegaan]
-## Algemeen
-
-- [x] 1 API in een GitHub repository
-- [x] 1 front-end in een GitHub repository
-- [x] Beschrijving van het gekozen thema, je API en je front-end + link naar hosted API, link naar front-end GitHub repository en link naar hosted front-end op GitHub README.md
-- [x] Aantoonbare werking totale API door screenshots van Postman requests op GitHub README.md
-- [x] Volledige OpenAPI docs screenshot(s) op GitHub README.md
-
-## REST API
-
-- [x] Minstens 2 GET endpoints 
-- [x] Minstens 1 POST endpoint met class(es)
-- [ ] Maximaal gebruik van validaties. Gebruik van response model wanneer aangewezen.
-- [x] Logisch gebruik van path parameters, query parameters en body
-
-## Deploying 
-
-- [x] Docker container voor de API, welke automatisch door GitHub Actions opgebouwd wordt
-- [x] Deployment van de API container op Okteto Cloud via Docker Compose
-
-## Front-end
-
-- [x] Een simpele front-end, minstens op basis van AlpineJS
-- [x] Deployment van de front-end
-
-## Suggesties voor bijkomende componenten
-
-- [x] Stijlgeving op de front-end (+5%)
-- [ ] Interactie van je API met een andere externe service, API of databank (+15%)
-- [x] Eigen inspiratie… (+?%) (extra functies zoals put, delete en add)
-
 # INFO
 
 - <a href="https://github.com/ThibaudWagemans/basisproject_api_dev">Mijn GitHub repository voor de api</a>
