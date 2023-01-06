@@ -123,7 +123,7 @@ async def update_GPU(GPU: schemas.GPUs, db: Session = Depends(get_db)):
 
 #delete a graphic card by name
 @app.delete("/delete_GPU")
-async def delete_GPU(GPU: schemas.deleteGraphicCard, db: Session = Depends(get_db), token: str = Depends(oauth2_scheme)):
+async def delete_GPU(GPU: schemas.deleteGraphicCard, db: Session = Depends(get_db)):
     return crud.delete_gpu(db, GPU)
 
 #post a new user
