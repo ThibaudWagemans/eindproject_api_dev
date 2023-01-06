@@ -131,6 +131,6 @@ async def get_release_dates(db: Session = Depends(get_db)):
     return crud.get_release_dates(db)
 
 #delete release date
-@app.delete("/delete_releaseDate/")
+@app.delete("/delete_releaseDate")
 async def delete_release_date(releaseDate: schemas.deleteReleaseDate, db: Session = Depends(get_db), token: str = Depends(oauth2_scheme)):
     return crud.delete_release_date(db, releaseDate)
