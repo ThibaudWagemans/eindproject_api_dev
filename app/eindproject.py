@@ -107,7 +107,7 @@ async def delete_GPU(GPU: schemas.deleteGraphicCard, db: Session = Depends(get_d
 
 #post a new user
 @app.post("/createusers")
-async def create_user(user: schemas.User, db: Session = Depends(get_db)):
+async def create_user(user: schemas.Usercreate, db: Session = Depends(get_db)):
     return crud.create_user(db, user)
 
 #get all users
