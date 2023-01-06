@@ -57,22 +57,30 @@
 
 # Methods
 ## GET
-- ik heb 6 verschillende GET methodes
+- ik heb 9 verschillende GET methodes
+- GET / : geeft een test terug met "hello world"
 - GET GPUs : geeft de lijst van alles verschillende modellen
 - Get GPUs/random : geeft een random GPU uit de lijst
-- GET GPUs/ :geeft de specs van de ingegeve GPU (naam)
+- GET GPU :geeft de specs van de ingegeve GPU (name)
 - GET GPUs/price/ : geeft de naam en specs van de GPU die het dichtste bij de opgegeven prijs zit
 - GET GPUs/memory/ : geeft de naam en specs van de GPU die het dichtste bij de opgegeven memory zit
 - GET GPUs/power/ : geeft de naam en specs van de GPU die het dichtste bij de opgegeven power zit
+- GET /users : geeft een lijst van alle users
+- GET /releaseDates : geeft een lijst van alle releasedates
 
 ## POST
-- POST add/: hier heb ik gekozen voor een add functie, hier geef je een naam, memory, prijs en power op en deze nieuwe GPU word toegevoegd aan de lijst
+- POST /GPUs: hier heb ik gekozen voor een add functie, hier geef je een naam, memory, prijs en power op en deze nieuwe GPU word toegevoegd aan de lijst
+- POST /createusers : hier voeg ik een user (met password) toe aan de tabel users
+- POST /token : hier maak ik een acces token aan
+- POST /createReleaseDate : hier voeg ik een naam van een gpu en de releasedate in de tabel releasedates
 
 ## DELETE
-- DELETE delete/: hier geef je de naam in van de GPU (uit de lijst) die je wilt verwijderen
+- DELETE delete_GPU/: hier geef je de naam in van de GPU (uit de lijst) die je wilt verwijderen
+- DELETE /delete_user : verwijderd de ingegeven user (name)
+- DELETE /delete_releaseDate/ : verwijderd de ingegeven releasedate
 
 ## PUT
-- PUT update/: hier geef je de naam van een GPU in waarvan je de waardes wilt aanpassen
+- PUT update_GPU/: hier geef je de naam van een GPU in waarvan je de waardes wilt aanpassen
 
 ## screenshots postman
 
