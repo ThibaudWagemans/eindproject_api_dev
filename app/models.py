@@ -17,8 +17,8 @@ class GPUs(Base):
 class releaseDate(Base):
     __tablename__ = "releaseDate"
 
-    name = Column(String, ForeignKey("GPUs.name"))
-    date = Column(String, primary_key=True, index=True)
+    name = Column(String, ForeignKey("GPUs.name"), primary_key=True, index=True)
+    date = Column(String, index=True)
 
     GPUs = relationship("GPUs", back_populates="releaseDate")
 
