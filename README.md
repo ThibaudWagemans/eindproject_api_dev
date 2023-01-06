@@ -118,7 +118,7 @@
 
 # INFO
 
-- <a href="https://github.com/ThibaudWagemans/basisproject_api_dev">Mijn GitHub repository voor de api</a>
-- <a href="https://github.com/ThibaudWagemans/basisproject_front_end">Mijn GitHub repository voor de front-end</a>
-- <a href="https://basisproject-service-thibaudwagemans.cloud.okteto.net">Mijn hosted API link</a>
-- <a href="https://thibaudwagemans.github.io/basisproject_front_end/basisproject.html">Mijn front-end link</a>
+- <a href="https://github.com/ThibaudWagemans/eindproject_api_dev">Mijn GitHub repository voor de api</a>
+- <a href="https://github.com/ThibaudWagemans/eindproject_front_end">Mijn GitHub repository voor de front-end</a>
+- <a href="https://eindproject-service-thibaudwagemans.cloud.okteto.net/">Mijn hosted API link</a>
+- <a href="https://thibaudwagemans.github.io/eindproject_front_end/">Mijn front-end link</a>
