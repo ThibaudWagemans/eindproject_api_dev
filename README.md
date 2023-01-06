@@ -90,17 +90,13 @@
 ## screenshots openAPI docs
 
 ![image](https://user-images.githubusercontent.com/57669221/211047799-9a5d11f9-a5cc-457f-a756-aef474b0b9e5.png)
-
-
-## screenshot website
-
 ![image](https://user-images.githubusercontent.com/57669221/202907095-c14fb835-64fe-4762-b467-6e216b6546bd.png)
 ![image](https://user-images.githubusercontent.com/57669221/211047835-ecf57a35-6572-414c-a660-4b61bb2b3cc0.png)
 ![image](https://user-images.githubusercontent.com/57669221/211047891-8c44697d-b502-4776-b084-542021f70e1a.png)
 ![image](https://user-images.githubusercontent.com/57669221/211048125-b28f8063-7ba1-430e-9bf2-9d04e6936158.png)
 ![image](https://user-images.githubusercontent.com/57669221/211048155-cc06306c-b371-477e-9208-00abf099bf87.png)
 
-
+## screenshot website
 
 
 # Algemene eisen & Documentatie (+65%) [Wat de leerling denk dat goed is gegaan]
