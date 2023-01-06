@@ -4,7 +4,7 @@ from pydantic import BaseModel
 import json
 from sqlalchemy.orm import Session
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm, HTTPBasic, HTTPBasicCredentials
-
+from fastapi.middleware.cors import CORSMiddleware
 
 from app import crud, models, schemas, auth
 import os
