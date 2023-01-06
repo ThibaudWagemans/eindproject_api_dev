@@ -10,7 +10,7 @@ class Usercreate (User) :
     pass
 
 class delete_user (User) :
-    pass
+    username : str
 
 #classes van GPUs
 class GPUs (BaseModel) :
@@ -28,7 +28,7 @@ class updateGraphicCard (BaseModel) :
     power: int
 
 class deleteGraphicCard (GPUs) :
-    pass
+    name : str
 
 
 #classes van releaseDates
@@ -42,9 +42,8 @@ class addReleaseDate (releaseDate) :
 class updateReleaseDate (releaseDate) :
     pass
 
-class deleteReleaseDate (BaseModel) :
+class deleteReleaseDate (releaseDate) :
     name: str
-    date: str
 
 
 

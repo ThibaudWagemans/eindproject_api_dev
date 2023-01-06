@@ -68,12 +68,11 @@ def update_gpu(db: Session, gpu: schemas.GPUs):
     return db_gpu
 
 #function to delete a graphic card
-def delete_GPU(name: str):
-    for GPU in GPUs:
-        if GPU.name == name:
-            GPUs.remove(GPU)
-            return GPU
-    return {"error": "GPU not found"}
+def delete_gpu(db: Session, graphic_card: schemas.GPUs):
+    db_graphic_card = db.query(models.GPUs).filter(models.GPUs.name == graphic_card.name).first()
+    db.delete(db_graphic_card)
+    db.commit()
+    return db_graphic_card
 
 #funtion add user
 def create_user(db: Session, user: schemas.User):
@@ -89,7 +88,7 @@ def get_users(db: Session, skip: int = 0, limit: int = 100):
     return db.query(models.User).offset(skip).limit(limit).all()
 
 #function delete user
-def delete_user(db: Session, user: schemas.User):
+def delete_user(db: Session, user: schemas.delete_user):
     db_user = db.query(models.User).filter(models.User.username == user.username).first()
     db.delete(db_user)
     db.commit()
@@ -108,7 +107,7 @@ def get_release_dates(db: Session, skip: int = 0, limit: int = 100):
     return db.query(models.releaseDate).offset(skip).limit(limit).all()
 
 #function delete release date
-def delete_release_date(db: Session, release_date: schemas.releaseDate):
+def delete_release_date(db: Session, release_date: schemas.deleteReleaseDate):
     db_release_date = db.query(models.releaseDate).filter(models.releaseDate.name == release_date.name).first()
     db.delete(db_release_date)
     db.commit()

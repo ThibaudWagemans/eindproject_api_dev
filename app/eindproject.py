@@ -1,17 +1,18 @@
-import os
-from app import crud, models, schemas
-#import crud
-#import models
-#import schemas
-#import auth
-from app.database import SessionLocal, engine
-
 from fastapi import Depends, FastAPI, HTTPException
 from random import randint
 from pydantic import BaseModel
 import json
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
+from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
+
+from app import crud, models, schemas
+import os
+#import crud
+#import models
+#import schemas
+#import auth
+from database import SessionLocal, engine
 
 
 if not os.path.exists('.\sqlitedb'):
@@ -96,8 +97,8 @@ async def update_GPU(GPU: schemas.GPUs, db: Session = Depends(get_db)):
 
 #delete a graphic card by name
 @app.delete("/delete_GPU")
-async def delete_GPU(name: str, db: Session = Depends(get_db)):
-    return crud.delete_GPU(db, name)
+async def delete_GPU(GPU: schemas.deleteGraphicCard, db: Session = Depends(get_db)):
+    return crud.delete_gpu(db, GPU)
 
 #post a new user
 @app.post("/createusers")
@@ -111,8 +112,8 @@ async def get_users(db: Session = Depends(get_db)):
 
 #delete user
 @app.delete("/delete_user")
-async def delete_user(username: str, db: Session = Depends(get_db)):
-    return crud.delete_user(db, username)
+async def delete_user(user: schemas.delete_user, db: Session = Depends(get_db)):
+    return crud.delete_user(db, user)
 
 #post a new release date
 @app.post("/createReleaseDate")
@@ -125,6 +126,6 @@ async def get_release_dates(db: Session = Depends(get_db)):
     return crud.get_release_dates(db)
 
 #delete release date
-@app.delete("/delete_releaseDate")
-async def delete_release_date(name: str, db: Session = Depends(get_db)):
-    return crud.delete_release_date(db, name)
+@app.delete("/delete_releaseDate/")
+async def delete_release_date(releaseDate: schemas.deleteReleaseDate, db: Session = Depends(get_db)):
+    return crud.delete_release_date(db, releaseDate)
