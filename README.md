@@ -5,7 +5,7 @@
   <p align="center">
     Gemaakt door Thibaud Wagemans
     <br />
-    <a href="https://thibaudwagemans.github.io/eindproject_front_end/"><strong>link live front-end»</strong></a>
+    <a href="https://eindproject-tw.netlify.app"><strong>link live front-end»</strong></a>
     <br />
     <br />
     <a href="https://github.com/ThibaudWagemans/eindproject_front_end">github Front-end repo</a>
@@ -119,3 +119,4 @@
 - <a href="https://github.com/ThibaudWagemans/eindproject_front_end">Mijn GitHub repository voor de front-end</a>
 - <a href="https://eindproject-service-thibaudwagemans.cloud.okteto.net/">Mijn hosted API link</a>
 - <a href="https://thibaudwagemans.github.io/eindproject_front_end/">Mijn front-end link</a>
+- <a href="https://eindproject-tw.netlify.app">Mijn front-end link op netlify</a>
