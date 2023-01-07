@@ -35,7 +35,8 @@ origins = [
     "http://127.0.0.1:5500"
     "https://localhost.tiangolo.com",
     "https://thibaudwagemans.github.io",
-    "http://thibaudwagemans.github.io"
+    "http://thibaudwagemans.github.io",
+    "https://eindproject-tw.netlify.app"
 ]
 
 app.add_middleware(
